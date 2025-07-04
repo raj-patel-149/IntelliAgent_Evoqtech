@@ -3,7 +3,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const employeeApi = createApi({
   reducerPath: "employeeApi",
 
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/api/employees" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://intelliagent-evoqtech.onrender.com/api/employees",
+  }),
 
   endpoints: (builder) => ({
     // ✅ Fetch Total Employee Count

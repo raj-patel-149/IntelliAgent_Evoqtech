@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const skillApi = createApi({
   reducerPath: "skillApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/api" }), // Change base URL if needed
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://intelliagent-evoqtech.onrender.com/api",
+  }), // Change base URL if needed
   tagTypes: ["skill"],
   endpoints: (builder) => ({
     addSkill: builder.mutation({

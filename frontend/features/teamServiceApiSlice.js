@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const teamServiceApi = createApi({
   reducerPath: "teamServiceApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/api" }), // Change base URL if needed
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://intelliagent-evoqtech.onrender.com/api",
+  }), // Change base URL if needed
   tagTypes: ["teamService"],
   endpoints: (builder) => ({
     assignEmployeesToCase: builder.mutation({
