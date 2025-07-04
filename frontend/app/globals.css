@@ -1,0 +1,35 @@
+@import "tailwindcss";
+/* Leaflet default styles */
+@import "leaflet/dist/leaflet.css";
+
+body {
+  background-color: #f3f4f6;
+}
+
+/* styles/globals.css */
+.custom-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  scrollbar-color: #9ca3af #e5e7eb; /* For Firefox */
+
+  /* Webkit (Chrome, Edge, Safari) */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 1px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb; /* Tailwind gray-200 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #9ca3af; /* Tailwind gray-400 */
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.addServiceFiled {
+  margin-top: 20px;
+}
