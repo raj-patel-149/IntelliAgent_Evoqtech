@@ -204,7 +204,7 @@ router.post("/add-user", upload.single("profile"), async (req, res) => {
     });
     await newUser.save();
 
-    const resetUrl = `http://localhost:3000/reset-password?token=${resetToken}`;
+    const resetUrl = `https://intelli-agent-evoqtech.vercel.app/reset-password?token=${resetToken}`;
     // Define Email Content
     const mailOptions = {
       from: "HCMS <rdpatel11124@gmail.com>",
