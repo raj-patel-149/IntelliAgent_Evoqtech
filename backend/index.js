@@ -4,8 +4,6 @@ const connectDB = require("./config/db"); // Import database connection
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
-
-
 const cronJobs = require("./utils/cronJobs");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -14,7 +12,7 @@ const uploadRoutes = require("./routes/uploadRoutes");
 const skillRoutes = require("./routes/skillRoutes");
 const notificationRoutes = require("./routes/notification");
 const employeeRoutes = require("./routes/employeeRoutes");
-const bookingRoutes = require("./routes/bookingRoutes")
+const bookingRoutes = require("./routes/bookingRoutes");
 const teamServiceRoutes = require("./routes/teamServiceRoute");
 
 const priceRoute = require("./routes/priceRoutes");
@@ -27,12 +25,11 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://intelli-agent-evoqtech.vercel.app",
     credentials: true,
   })
 );
 app.use(cookieParser());
-
 
 // Connect to MongoDB
 connectDB();
